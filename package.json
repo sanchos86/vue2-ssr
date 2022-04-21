@@ -1,0 +1,38 @@
+{
+  "name": "vue2-ssr",
+  "version": "1.0.0",
+  "description": "vue2-ssr",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node --experimental-json-modules index.js",
+    "build": "rimraf dist && npm run build:client && npm run build:server",
+    "build:client": "cross-env NODE_ENV=production webpack --config webpack/webpack.client.config.js",
+    "build:server": "cross-env NODE_ENV=production webpack --config webpack/webpack.server.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.3",
+    "serve-favicon": "^2.5.0",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.3",
+    "vue-server-renderer": "^2.6.14",
+    "vuex": "^3.6.2"
+  },
+  "type": "module",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "rimraf": "^3.0.2",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
